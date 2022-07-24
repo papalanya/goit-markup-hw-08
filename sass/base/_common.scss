@@ -1,0 +1,33 @@
+body {
+    color: $main-text-color;
+    font-family: $main-font;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding: 0 15px;
+    /* outline: 2px solid tomato; */
+}
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+}
+.link {
+    text-decoration: none;
+    color: currentColor;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+.list {
+    list-style: none;
+}

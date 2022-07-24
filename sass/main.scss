@@ -1,0 +1,24 @@
+@import "./utils/variables";
+@import "./base/normalize";
+@import "./utils/visually-hidden";
+@import "./base/reset";
+@import "./base/common";
+@import "./base/js-selectors";
+
+// components
+@import "./components/btn";
+@import "./components/logo";
+@import "./components/nav";
+@import "./components/social-link";
+@import "./components/modal-window/modal";
+@import "./components/btn-filter";
+
+// layouts
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/hero";
+@import "./layouts/features";
+@import "./layouts/services";
+@import "./layouts/team";
+@import "./layouts/clients";
+@import "./layouts/projects";

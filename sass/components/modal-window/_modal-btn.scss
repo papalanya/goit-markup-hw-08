@@ -1,0 +1,21 @@
+.modal-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: $main-bg-color;
+    border: 1px solid $modal-btn-bg;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: $transitionStyle;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+}
+

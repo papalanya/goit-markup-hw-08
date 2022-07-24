@@ -1,0 +1,41 @@
+.services {
+    padding-bottom: 94px;
+    background-color: $main-bg-color;
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    &__item {
+        position: relative;
+        margin-right: 30px;
+    }
+
+    &__item:last-child {
+        margin-right: 0;
+    }
+
+    &__label {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $third-color;
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+}

@@ -1,0 +1,38 @@
+.clients {
+    padding: 94px 0;
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        margin-right: 30px;
+    }
+
+    &__item:last-child {
+        margin-right: 0;
+    }
+
+    &__link {
+        display: flex;
+        width: 170px;
+        height: 92px;
+        border: 1px solid $main-icon-color;
+        align-items: center;
+        justify-content: center;
+        fill: $main-icon-color;
+        border-radius: 4px;
+        transition: $transitionStyle;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        border: 1px solid $accent-color;
+        fill: $accent-color;
+    }
+}
