@@ -4,12 +4,27 @@ body {
     font-size: 14px;
     letter-spacing: 0.03em;
 }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
     padding: 0 15px;
-    /* outline: 2px solid tomato; */
+    
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+    
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+    }
 }
 .section-title {
     font-weight: 700;
