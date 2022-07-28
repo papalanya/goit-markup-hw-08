@@ -361,6 +361,42 @@ img {
   background-color: #188ce8;
 }
 
+.menu__button {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  z-index: 5;
+  color: #212121;
+}
+.menu__button--is-open {
+  position: fixed;
+}
+.menu__button:hover, .menu__button:focus {
+  cursor: pointer;
+  fill: #2196f3;
+}
+@media screen and (min-width: 768px) {
+  .menu__button {
+    display: none;
+  }
+}
+
+.menu__icon {
+  display: block;
+}
+.menu__button--is-open .menu__icon {
+  display: block;
+  position: fixed;
+}
+
+.close__icon {
+  display: none;
+}
+.menu__button--is-open .close__icon {
+  display: block;
+  position: fixed;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
