@@ -1,13 +1,27 @@
 .btn-filter {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    
 
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
     
 
     &__item {
         margin-right: 8px;
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 15px;
+        }
     }
 
     &__item:last-child {

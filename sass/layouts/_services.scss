@@ -38,4 +38,8 @@
         color: $third-color;
         background-color: rgba(47, 48, 58, 0.8);
     }
+    
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
 }
