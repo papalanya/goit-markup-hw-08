@@ -26,25 +26,28 @@
 
         <button
           type="button"
-          class="menu-btn"
+          class="menu-btn js-open-menu"
           aria-label="мобильное меню"
-          data-menu-button
+          aria-expanded="false"
         >
           <svg class="menu-icon" width="24" height="16">
             <use class="menu-burger" href="./images/icons.svg#icon-menu"></use>
-            <use class="menu-close" href="./images/icons.svg#icon-close"></use>
+            <use
+              class="menu-close js-close-menu"
+              href="./images/icons.svg#icon-close"
+            ></use>
           </svg>
         </button>
 
-        <div class="mobile-menu" data-menu>
+        <div class="mobile-menu js-menu-container" id="mobile-menu">
           <ul class="mobile-menu__nav-list list">
             <li class="mobile-menu__nav-item">
-              <a class="mobile-menu__nav-link link--current" href="#">Студия</a>
-            </li>
-            <li class="mobile-menu__nav-item">
-              <a class="mobile-menu__nav-link link" href="./portfolio.html"
-                >Портфолио</a
+              <a class="mobile-menu__nav-link link" href="./index.html"
+                >Студия</a
               >
+            </li>
+            <li class="mobile-menu__nav-item mobile-menu__nav-item--current">
+              <a class="mobile-menu__nav-link link" href="#">Портфолио</a>
             </li>
             <li class="mobile-menu__nav-item">
               <a class="mobile-menu__nav-link link" href="#">Контакты</a>
@@ -444,5 +447,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

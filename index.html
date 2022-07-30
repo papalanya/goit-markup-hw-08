@@ -16,7 +16,6 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        
         <a
           class="logo link header__logo"
           href="./index.html"
@@ -24,21 +23,31 @@
           lang="en"
           >Web<span class="logo__text logo__text--dark">Studio</span>
         </a>
-        
-        <button type="button" class="menu-btn" aria-label="мобильное меню" data-menu-button>
+
+        <button
+          type="button"
+          class="menu-btn js-open-menu"
+          aria-label="мобильное меню"
+          aria-expanded="false"
+        >
           <svg class="menu-icon" width="24" height="16">
             <use class="menu-burger" href="./images/icons.svg#icon-menu"></use>
-            <use class="menu-close" href="./images/icons.svg#icon-close"></use>
+            <use
+              class="menu-close js-close-menu"
+              href="./images/icons.svg#icon-close"
+            ></use>
           </svg>
         </button>
 
-        <div class="mobile-menu" data-menu>
+        <div class="mobile-menu js-menu-container" id="mobile-menu">
           <ul class="mobile-menu__nav-list list">
-            <li class="mobile-menu__nav-item">
-              <a class="mobile-menu__nav-link link--current" href="#">Студия</a>
+            <li class="mobile-menu__nav-item mobile-menu__nav-item--current">
+              <a class="mobile-menu__nav-link link" href="#">Студия</a>
             </li>
             <li class="mobile-menu__nav-item">
-              <a class="mobile-menu__nav-link link" href="./portfolio.html">Портфолио</a>
+              <a class="mobile-menu__nav-link link" href="./portfolio.html"
+                >Портфолио</a
+              >
             </li>
             <li class="mobile-menu__nav-item">
               <a class="mobile-menu__nav-link link" href="#">Контакты</a>
@@ -46,10 +55,18 @@
           </ul>
           <ul class="mobile-menu__contacts-list list">
             <li class="mobile-menu__contacts-item">
-              <a class="mobile-menu__contacts-link link accent" href="tel:+380961111111">+38 096 111 11 11</a>
+              <a
+                class="mobile-menu__contacts-link link accent"
+                href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
             </li>
             <li class="mobile-menu__contacts-item">
-              <a class="mobile-menu__contacts-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <a
+                class="mobile-menu__contacts-link link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
             </li>
           </ul>
           <ul class="mobile-menu__socials-list list">
@@ -68,7 +85,6 @@
           </ul>
         </div>
 
-
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item">
@@ -82,7 +98,7 @@
             </li>
           </ul>
         </nav>
-        
+
         <div class="header__contacts">
           <ul class="header__contacts-list list">
             <li class="header__contacts-item">
@@ -106,8 +122,7 @@
             </li>
           </ul>
         </div>
-
-        
+      </div>
     </header>
 
     <main>
@@ -119,7 +134,7 @@
             Заказать услугу
           </button>
         </div>
-        
+
         <div class="backdrop is-hidden" data-modal>
           <div class="modal-wrapper">
             <button class="modal-btn" type="button" data-modal-close>
@@ -269,7 +284,11 @@
           <ul class="services__list list">
             <li class="services__item">
               <img
-                src="./images/we-do/workPC.jpg"
+                srcset="
+                  ./images/we-do/we-do-1_lg.jpg    1x,
+                  ./images/we-do/we-do-1_lg@2x.jpg 2x
+                "
+                src="./images/we-do/we-do-1_lg.jpg"
                 alt="work PC"
                 width="370"
                 height="294"
@@ -278,7 +297,11 @@
             </li>
             <li class="services__item">
               <img
-                src="./images/we-do/workPhone.jpg"
+                srcset="
+                  ./images/we-do/we-do-2_lg.jpg    1x,
+                  ./images/we-do/we-do-2_lg@2x.jpg 2x
+                "
+                src="./images/we-do/we-do-2_lg.jpg"
                 alt="work Phone"
                 width="370"
                 height="294"
@@ -287,7 +310,11 @@
             </li>
             <li class="services__item">
               <img
-                src="./images/we-do/workTablet.jpg"
+                srcset="
+                  ./images/we-do/we-do-3_lg.jpg    1x,
+                  ./images/we-do/we-do-3_lg@2x.jpg 2x
+                "
+                src="./images/we-do/we-do-3_lg.jpg"
                 alt="work Tablet"
                 width="370"
                 height="294"
@@ -304,12 +331,70 @@
           <h2 class="team__title section-title">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item">
-              <img
-                src="./images/team/photo1.jpg"
-                alt="Игорь Демьяненко - Product Designer"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    images./team./photo-1_lg.webp    1x,
+                    images./team./photo-1_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    images./team./photo-1_lg.jpg    1x,
+                    images./team./photo-1_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    images./team./photo-1_m.webp    1x,
+                    images./team./photo-1_m@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    images./team./photo-1_m.jpg    1x,
+                    images./team./photo-1_m@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    images./team./photo-1_s.webp    1x,
+                    images./team./photo-1_s@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    images./team./photo-1_s.jpg    1x,
+                    images./team./photo-1_s@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- Default picture-->
+                <img
+                  src="./images/team/photo-1_s.jpg"
+                  alt="Игорь Демьяненко - Product Designer"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="team__content">
                 <h3 class="team__subtitle">Игорь Демьяненко</h3>
                 <p class="team__text" lang="en">Product Designer</p>

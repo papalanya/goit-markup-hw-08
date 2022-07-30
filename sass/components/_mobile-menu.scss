@@ -15,6 +15,7 @@
     background-color: $third-color;
     
     transition: $transitionStyle;
+    z-index: 9;
 
     &.is-open {
         transform: translateX(0);
