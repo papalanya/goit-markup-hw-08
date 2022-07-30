@@ -1,0 +1,121 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    overflow-y: auto;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+
+    display: flex;
+    flex-direction: column;
+    
+    background-color: $third-color;
+    
+    transition: $transitionStyle;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    &__nav-list {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        color: $secondary-text-color;
+
+        margin-bottom: auto;
+    }
+
+    &__nav-item {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+
+        &--current {
+            color: $accent-color;
+        }
+    }
+
+    &__contacts-list {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        color: $main-text-color;
+
+        margin-bottom: 64px;
+    }
+
+    &__contacts-item {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+
+        .accent {
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 1.18;
+            letter-spacing: 0.02em;
+            color: $accent-color;
+        }
+    }
+
+    &__socials-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 0.02em;
+        color: $accent-color;
+    }
+    &__social-item:not(:last-child) .mobile-menu__social-link {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+}
+
+.menu-btn {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    z-index: 10;
+    
+    cursor: pointer;
+    transition: $transitionStyle;
+
+    &:hover .menu-icon {
+        fill: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-burger{
+    .menu-btn.is-open & {
+    opacity: 0;
+    }
+}
+.menu-close {
+    opacity: 0;
+    
+    .menu-btn.is-open & {
+    opacity: 1;
+    }
+}

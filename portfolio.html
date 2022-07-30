@@ -16,7 +16,6 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <!--Верхняя линия-->
         <a
           class="logo link header__logo"
           href="./index.html"
@@ -24,7 +23,65 @@
           lang="en"
           >Web<span class="logo__text logo__text--dark">Studio</span>
         </a>
-        <!--Навигация-->
+
+        <button
+          type="button"
+          class="menu-btn"
+          aria-label="мобильное меню"
+          data-menu-button
+        >
+          <svg class="menu-icon" width="24" height="16">
+            <use class="menu-burger" href="./images/icons.svg#icon-menu"></use>
+            <use class="menu-close" href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu" data-menu>
+          <ul class="mobile-menu__nav-list list">
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link link--current" href="#">Студия</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link link" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu__contacts-list list">
+            <li class="mobile-menu__contacts-item">
+              <a
+                class="mobile-menu__contacts-link link accent"
+                href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu__contacts-item">
+              <a
+                class="mobile-menu__contacts-link link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu__socials-list list">
+            <li class="mobile-menu__social-item">
+              <a class="mobile-menu__social-link link" href="#">Instagram</a>
+            </li>
+            <li class="mobile-menu__social-item">
+              <a class="mobile-menu__social-link link" href="#">Twitter</a>
+            </li>
+            <li class="mobile-menu__social-item">
+              <a class="mobile-menu__social-link link" href="#">Facebook</a>
+            </li>
+            <li class="mobile-menu__social-item">
+              <a class="mobile-menu__social-link link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item">
@@ -42,7 +99,7 @@
             </li>
           </ul>
         </nav>
-        <!--tel+e-mail-->
+
         <div class="header__contacts">
           <ul class="header__contacts-list list">
             <li class="header__contacts-item">
@@ -74,7 +131,7 @@
       <section class="portfolio">
         <div class="container">
           <h1 class="visually-hidden" hidden>Наши проекты</h1>
-          <!--Кнопки фильтров списка проектов-->
+
           <ul class="btn-filter list">
             <li class="btn-filter__item">
               <button class="btn-filter__label current" type="button">
@@ -97,7 +154,6 @@
             </li>
           </ul>
 
-          <!--Галерея проектов-->
           <ul class="projects-list list">
             <li class="projects-list__item">
               <a class="projects-list__link link" href="#">
@@ -299,7 +355,6 @@
 
     <!--Подвал, контакты-->
     <footer class="footer">
-      <!--Лого-->
       <div class="container footer__container">
         <div class="logo-box">
           <a
@@ -332,6 +387,7 @@
             </ul>
           </address>
         </div>
+
         <div class="join-box">
           <h3 class="footer__title">присоединяйтесь</h3>
           <ul class="join-list list">
@@ -365,6 +421,7 @@
             </li>
           </ul>
         </div>
+
         <div class="subscribe-box">
           <b class="footer__title">Подпишитесь на рассылку</b>
           <form class="subscribe-form">
