@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body>
+  <body data-body>
     <header class="header">
       <div class="container header__container">
         <a
@@ -26,20 +26,18 @@
 
         <button
           type="button"
-          class="menu-btn js-open-menu"
+          class="menu-btn"
           aria-label="мобильное меню"
           aria-expanded="false"
+          data-menu-button
         >
           <svg class="menu-icon" width="24" height="16">
             <use class="menu-burger" href="./images/icons.svg#icon-menu"></use>
-            <use
-              class="menu-close js-close-menu"
-              href="./images/icons.svg#icon-close"
-            ></use>
+            <use class="menu-close" href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
 
-        <div class="mobile-menu js-menu-container" id="mobile-menu">
+        <div class="mobile-menu" data-menu>
           <ul class="mobile-menu__nav-list list">
             <li class="mobile-menu__nav-item">
               <a class="mobile-menu__nav-link link" href="./index.html"

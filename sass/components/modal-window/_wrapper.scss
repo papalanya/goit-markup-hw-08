@@ -4,6 +4,7 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1.1);
     width: 450px;
+    max-width: calc(100% - 30px);
     height: 609px;
     padding: 40px;
     background-color: $main-bg-color;
@@ -16,3 +17,4 @@
         height: 581px;
     }
 }
+
